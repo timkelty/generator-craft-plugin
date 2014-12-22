@@ -100,12 +100,12 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('editorconfig'),
         this.destinationPath(path.join(pluginDest, '.editorconfig'))
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_package.json'),
         this.destinationPath(path.join(pluginDest, 'package.json')),
         this
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_composer.json'),
         this.destinationPath(path.join(pluginDest, 'composer.json')),
         this
