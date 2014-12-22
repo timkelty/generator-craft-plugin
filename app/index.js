@@ -27,8 +27,8 @@ module.exports = yeoman.generators.Base.extend({
       {
         type: 'input',
         name: 'pluginName',
-        message: 'Plugin name (e.g. My Plugin)',
-        default: this.appname
+        message: 'Plugin name',
+        default: 'My Plugin'
       },
       {
         type: 'input',
@@ -76,7 +76,7 @@ module.exports = yeoman.generators.Base.extend({
 
       // For directory, NPM, Composer
       this.pluginHandleLower = props.pluginHandle.toLowerCase();
-      this.pluginHandleSlugged = this._.slugify(props.pluginHandle);
+      this.pluginHandleSlugged = this._.slugify(props.pluginName);
 
       done();
     }.bind(this));
