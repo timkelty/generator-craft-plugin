@@ -84,8 +84,6 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: {
     pluginFiles: function () {
-      console.log(this);
-
       var pluginDest = path.join(this.pluginDir, this.pluginHandleLower);
       var generator = this;
 
@@ -134,7 +132,7 @@ module.exports = yeoman.generators.Base.extend({
     });
 
     if (this.useComposer) {
-      this.spawnCommand('composer', ['install']);
+      require('child_process').exec('composer install --working-dir ' + pluginDest);
     }
   }
 });
