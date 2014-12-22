@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-craft-plugin' ]; then cd .. && eval "mv $currentfolder generator-craft-plugin" && cd generator-craft-plugin; fi

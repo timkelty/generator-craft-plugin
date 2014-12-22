@@ -1,0 +1,5 @@
+{
+  "name": "<%= pluginHandleSlugged %>",
+  "version": "<%= pluginVersion %>",
+  "require": {}
+}
