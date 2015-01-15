@@ -4,10 +4,10 @@
 
 ## Getting Started
 
-To install Yeoman, run:
+To install Yeoman and it's required packages, run:
 
 ```bash
-npm install -g yo
+npm install -g yo bower grunt-cli gulp
 ```
 
 To install generator-craft-plugin from npm, run:
