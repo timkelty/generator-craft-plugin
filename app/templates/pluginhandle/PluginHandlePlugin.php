@@ -29,7 +29,7 @@ class <%= pluginHandle %>Plugin extends BasePlugin
 
 	public function hasCpSection()
 	{
-		return true;
+		return false;
 	}
 
 	/**
@@ -43,4 +43,12 @@ class <%= pluginHandle %>Plugin extends BasePlugin
 			'pluginNameOverride' => AttributeType::String,
 		);
 	}
+
+	public function getSettingsHtml()
+	{
+		return craft()->templates->render('<%= pluginHandleLower %>/settings', array(
+			'settings' => $this->getSettings()
+		));
+	}
+
 }

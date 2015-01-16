@@ -108,9 +108,83 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath(path.join(pluginDest, 'composer.json')),
         this
       );
+      this.fs.copy(
+        this.templatePath('editorconfig'),
+        this.destinationPath(path.join(pluginDest, '.editorconfig'))
+      );
       this.fs.copyTpl(
-        this.templatePath('pluginhandle/**/*'),
-        this.destinationPath(pluginDest),
+        this.templatePath('_package.json'),
+        this.destinationPath(path.join(pluginDest, 'package.json')),
+        this
+      );
+      this.fs.copyTpl(
+        this.templatePath('_composer.json'),
+        this.destinationPath(path.join(pluginDest, 'composer.json')),
+        this
+      );
+      this.fs.copyTpl(
+        this.templatePath('pluginhandle/PluginHandlePlugin.php'),
+        this.destinationPath(path.join(pluginDest, 'PluginHandlePlugin.php')),
+        this
+      );
+      this.fs.copyTpl(
+        this.templatePath('pluginhandle/controllers/*'),
+        this.destinationPath(path.join(pluginDest, 'controllers')),
+        this
+      );
+      this.fs.copyTpl(
+        this.templatePath('pluginhandle/elementactions/*'),
+        this.destinationPath(path.join(pluginDest, 'elementactions')),
+        this
+      );
+      this.fs.copyTpl(
+        this.templatePath('pluginhandle/fieldtypes/*'),
+        this.destinationPath(path.join(pluginDest, 'fieldtypes')),
+        this
+      );
+      this.fs.copyTpl(
+        this.templatePath('pluginhandle/migrations/*'),
+        this.destinationPath(path.join(pluginDest, 'migrations')),
+        this
+      );
+      this.fs.copyTpl(
+        this.templatePath('pluginhandle/models/*'),
+        this.destinationPath(path.join(pluginDest, 'models')),
+        this
+      );
+      this.fs.copyTpl(
+        this.templatePath('pluginhandle/records/*'),
+        this.destinationPath(path.join(pluginDest, 'records')),
+        this
+      );
+      this.fs.copyTpl(
+        this.templatePath('pluginhandle/resources/*'),
+        this.destinationPath(path.join(pluginDest, 'resources')),
+        this
+      );
+      this.fs.copyTpl(
+        this.templatePath('pluginhandle/services/*'),
+        this.destinationPath(path.join(pluginDest, 'services')),
+        this
+      );
+      this.fs.copyTpl(
+        this.templatePath('pluginhandle/templates/*'),
+        this.destinationPath(path.join(pluginDest, 'templates')),
+        this
+      );
+      this.fs.copyTpl(
+        this.templatePath('pluginhandle/translations/*'),
+        this.destinationPath(path.join(pluginDest, 'translations')),
+        this
+      );
+      this.fs.copyTpl(
+        this.templatePath('pluginhandle/variables/*'),
+        this.destinationPath(path.join(pluginDest, 'variables')),
+        this
+      );
+      this.fs.copyTpl(
+        this.templatePath('pluginhandle/widgets/*'),
+        this.destinationPath(path.join(pluginDest, 'widgets')),
         this
       );
     },
