@@ -1,4 +1,9 @@
-# generator-craft-plugin 
+# generator-craft-plugin
+
+## Deprecation Warning!
+
+Do not use this repo/package.
+Please use https://github.com/nystudio107/generator-craftplugin
 
 > [Yeoman](http://yeoman.io) generator
 
